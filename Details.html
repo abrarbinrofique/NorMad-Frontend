@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Normad</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+>
+
+
+    <link rel="stylesheet" href="Details.css"/>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid bg-dark">
+        <div class="justify-content-center align-center">
+          <img class="logoclass" src="./svgs/logo.svg" alt="add" />
+          <a class="navbar-brand m-auto namee text-white" href="index.html">NorMad</a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="ml-80vw" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+
+            <li class="nav-item dropdown">
+              <div id="profileid"> 
+
+                <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fas fa-user-circle"></i>
+          </a>
+          <ul id="profileid" class="dropdown-menu">
+            <li><a class="dropdown-item " href="profile.html">Profile</a></li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" onclick="logoutuser()">Logout</a></li>
+          </ul>
+
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="Adventures.html"
+                >Adventure</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Chatting.html">Discussion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white">About us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </head>
+  <body>
+
+
+
+<div id="services" class="detailsdiv justify-content-center align-items-center m-5 p-5">
+   
+</div>
+
+<h3 class="text-center headings">TOUR Review's</h3>
+<div class="justify-content-center">
+<div class="swiffy-slider slider-item-show3 slider-nav-round slider-nav-page ">
+  <ul id="ourslides" class="slider-container">
+   
+ 
+  </ul>
+
+  <button type="button" class="slider-nav" aria-label="Go left"></button>
+  <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Share Travel!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <form>
+      
+     
+         
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="limit" class="input custom-input" placeholder="Limit People"  required/>
+           
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="text" class="input custom-input" placeholder="Write something about your Share Travel" required/>
+          </div>
+            [After Share the Travel you must join your sharing travel if you don't book the Travel from here]
+          <div class="pt-1 mb-4">
+            <button onclick="ShareTravel(event)" class="btn btn-warning btn-lg btn-block" type="button">Share</button>
+          </div>
+
+        
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<!--Review Modal -->
+<div class="modal fade" id="exampleMod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Give a review</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <form>
+      
+     
+         
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <div class="mb-3">
+              <label for="ratting" class="form-label">Rating</label>
+              <select class="form-control" id="ratting" required>
+                <option value=1>⭐</option>
+                <option value=2>⭐⭐</option>
+                <option value=3>⭐⭐⭐</option>
+                <option value=4>⭐⭐⭐⭐</option>
+                <option value=5>⭐⭐⭐⭐⭐</option>
+              </select>
+            </div>
+           
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="textrv" class="input custom-input" placeholder="Write your best experiene" required/>
+          </div>
+
+          <div class="pt-1 mb-4">
+            <button onclick="Postreview(event)" class="btn btn-warning btn-lg btn-block" type="button">Post</button>
+          </div>
+
+        
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="Details.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
+ 

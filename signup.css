@@ -1,0 +1,46 @@
+body{
+    background-image: url("https://res.cloudinary.com/dk2vgd0dv/image/upload/v1723566992/samples/landscapes/nature-mountains.jpg");
+     background-position: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width:110vw;
+    margin-right:10vw
+}
+
+/* .loginlogo{
+
+    width:
+
+} */
+
+
+.logoclass{
+    width:3vw;
+    height: 4vw;
+}
+
+.images{
+   height: 32vw;
+   box-shadow: 2px 2px 2px 2px;
+}
+
+.custom-input {
+    border: 2px solid #ccc;       
+    border-radius: 10px;            
+    padding: 10px;                  
+    width: 100%;                  
+    box-sizing: border-box;        
+    font-size: 16px;                
+}
+
+.custom-input:focus {
+    border-color: #007bff;          /* Border color when focused */
+    outline: none;                  /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: add shadow on focus */
+}
+
+
+footer{
+    background-color: black;
+}
+
