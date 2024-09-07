@@ -1,15 +1,19 @@
-let i=localStorage.getItem('user_id')
-let d=localStorage.getItem('token')
-
-if (i && d)
-
-    {
+if (!localStorage.getItem('user_id') || !localStorage.getItem('token')) {
+    window.location.href = 'login.html';  // Redirect to login if not authenticated
+} else {
 
 
 
-let programme=0;
+chatlist()
+
+
+
+
+
+}
 async function chatlist()
 {
+   
     let l=localStorage.getItem('user_id')
     console.log(l)
      const  resp= await fetch(`http://127.0.0.1:8000/event/list/?people=${l}`)
@@ -40,8 +44,8 @@ async function chatlist()
     });
 }
 
-chatlist()
 
+let programme=0;
 
 async function chats(k) {
 
@@ -75,6 +79,7 @@ async function chats(k) {
     </div>
     `;
 }
+
 
 async function sender(event,k)
 {   event.preventDefault()
@@ -116,11 +121,3 @@ function logoutuser() {
     window.location.href = 'login.html';  
   }
   
-
-
-
-    }
-    else
-    {
-        window.location.href='login.html'
-    }

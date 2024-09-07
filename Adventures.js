@@ -6,6 +6,17 @@ if (i && d)
     {
 
 
+
+      sharetravels()
+
+
+}
+else
+{
+    window.location.href='login.html'
+}
+
+
 async function travelsdetails(k)
 {
   let x= await fetch(`http://127.0.0.1:8000/event/list/${k}`)
@@ -119,7 +130,7 @@ async function sharetravels()
     }})}
 
 
-sharetravels()
+
 
 
 
@@ -185,13 +196,4 @@ function logoutuser() {
   
   
   window.location.href = 'login.html';  
-}
-
-
-
-
-}
-else
-{
-    window.location.href='login.html'
 }

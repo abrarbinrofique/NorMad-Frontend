@@ -1,11 +1,28 @@
-let cus=localStorage.getItem('user_id')
-let t=localStorage.getItem('token');
 
      
-if (cus && t)
+if (localStorage.getItem('user_id') && localStorage.getItem('token'))
     {
     
   
+
+
+detailtour()
+rv()
+
+
+
+
+    }
+    else
+    {
+        
+    
+    
+    window.location.href = 'login.html';  
+    }
+
+
+
 
 async function detailtour(){
     const k = new URLSearchParams(window.location.search).get("dataid");
@@ -59,7 +76,7 @@ async function detailtour(){
 
 
 
-detailtour()
+
 
 
 function getvalue(id) {
@@ -324,7 +341,6 @@ async function rv()
 } 
 
 
-rv()
 function logoutuser() {
     localStorage.removeItem('token');
     localStorage.removeItem('user_id');
@@ -334,17 +350,3 @@ function logoutuser() {
     window.location.href = 'login.html';  
   }
   
-
-
-
-    }
-    else
-    {
-        
-    
-    
-    window.location.href = 'login.html';  
-    }
-// http://127.0.0.1:8000/event/review/?reviewer=6
-
-// http://127.0.0.1:8000/event/review/?travelname=6
