@@ -76,7 +76,7 @@ body{
 
     .submit-btn{
 
-      background-color: #7905bc;
+      background-color: #0a090a;
       padding:4px;
       color:white;
       border-radius: 1px;
@@ -100,7 +100,7 @@ footer{
     margin-left:30vw;
     border-radius: 30px;
 }
-.card {
+.carder {
   background-image: url("https://res.cloudinary.com/dk2vgd0dv/image/upload/v1725094299/ctr89shnuycevunqufem.jpg");
   background-size: cover; /* Make the background cover the entire card */
   background-position: center; /* Center the background image */
@@ -111,6 +111,15 @@ footer{
 }
 
 
-/* .card{
+.card{
+ background-color: #B1E2FF;
+}
 
-} */
+.carimage{
+border-radius: 50%;
+margin-top: -250px;
+margin-right: -500px;
+height: 30%;
+width: 30%;
+
+}
