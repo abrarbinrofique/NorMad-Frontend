@@ -7,11 +7,6 @@ body{
     margin-right:10vw
 }
 
-/* .loginlogo{
-
-    width:
-
-} */
 
 
 .logoclass{
@@ -20,7 +15,7 @@ body{
 }
 
 .images{
-   height: 32vw;
+   height: 150vw;
    box-shadow: 2px 2px 2px 2px;
 }
 
@@ -105,3 +100,17 @@ footer{
     margin-left:30vw;
     border-radius: 30px;
 }
+.card {
+  background-image: url("https://res.cloudinary.com/dk2vgd0dv/image/upload/v1725094299/ctr89shnuycevunqufem.jpg");
+  background-size: cover; /* Make the background cover the entire card */
+  background-position: center; /* Center the background image */
+  height: 100%; /* Use a relative height */
+  border-radius: 20px; /* Simplified border-radius */
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+
+/* .card{
+
+} */
