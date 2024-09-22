@@ -46,8 +46,8 @@ ui.innerHTML=
 async function profiles(){
   userid=localStorage.getItem('user_id')
    const card=document.getElementById('profilecard')
-   const re=await fetch(`http://127.0.0.1:8000/account/upgrade/?people=${parseInt(userid)}`)
-  const d=await fetch (`http://127.0.0.1:8000/account/registration/${parseInt(userid)}`)
+   const re=await fetch(`https://normad-bakend.onrender.com/account/upgrade/?people=${parseInt(userid)}`)
+  const d=await fetch (`https://normad-bakend.onrender.com/account/registration/${parseInt(userid)}`)
   const m=await d.json()
   console.log(m)
 
@@ -86,7 +86,7 @@ async function friendrequest()
   let k=localStorage.getItem('user_id')
   //  k=parseInt(k)
   const requestlist=document.getElementById('requestlist')
-  const response= await  fetch(`http://127.0.0.1:8000/account/friendrequest/?to_user=${k}`)
+  const response= await  fetch(`https://normad-bakend.onrender.com/account/friendrequest/?to_user=${k}`)
   const data=await  response.json() 
   console.log(data)
   if (data.length === 0) {
@@ -101,7 +101,7 @@ async function friendrequest()
           findusername(g)
       async function findusername(g)
       {
-         const who=await fetch (`http://127.0.0.1:8000/account/registration/${g}/`)
+         const who=await fetch (`https://normad-bakend.onrender.com/account/registration/${g}/`)
 
          const rel=await who.json()
          
@@ -141,7 +141,7 @@ async function accept(k,l)
   };
   console.log(formData,k)
   try {
-      const response = await fetch(`http://127.0.0.1:8000/account/friendrequest/${k}/accept_request/`, {
+      const response = await fetch(`https://normad-bakend.onrender.com/account/friendrequest/${k}/accept_request/`, {
           method: "POST",
           headers: {
               "Content-Type": "application/json"
@@ -175,7 +175,7 @@ async function remove(k,l)
   };
   console.log(formData,k)
   try {
-      const response = await fetch(`http://127.0.0.1:8000/account/friendrequest/${k}/remove_request/`, {
+      const response = await fetch(`https://normad-bakend.onrender.com/account/friendrequest/${k}/remove_request/`, {
           method: "POST",
           headers: {
               "Content-Type": "application/json"
@@ -221,7 +221,7 @@ async function addplan(event) {
   formData.append('image', pic); 
 
   try {
-      const response = await fetch(`http://127.0.0.1:8000/event/list/`, {
+      const response = await fetch(`https://normad-bakend.onrender.com/event/list/`, {
           method: "POST",
           body: formData, 
       });
@@ -243,7 +243,7 @@ document.getElementById('profileForm').addEventListener('submit', addprofileinfo
 
 async function addprofileinfo(event) {
     event.preventDefault();
-    const re=await fetch(`http://127.0.0.1:8000/account/upgrade/?people=${parseInt(userid)}`)
+    const re=await fetch(`https://normad-bakend.onrender.com/account/upgrade/?people=${parseInt(userid)}`)
     const data=await re.json()
     travelerid=data[0].id
     console.log(travelerid)
@@ -269,7 +269,7 @@ async function addprofileinfo(event) {
 
   if (travelerid)
   {
-    const responsePut = await fetch(`http://127.0.0.1:8000/account/upgrade/${travelerid}/`, {
+    const responsePut = await fetch(`https://normad-bakend.onrender.com/account/upgrade/${travelerid}/`, {
         method: "PUT",
         body: formData,
     });
@@ -282,7 +282,7 @@ async function addprofileinfo(event) {
   else
   {
     try {
-        const response = await fetch(`http://127.0.0.1:8000/account/upgrade/`, {
+        const response = await fetch(`https://normad-bakend.onrender.com/account/upgrade/`, {
             method: "POST", // or "PUT" based on your need
             body: formData,
         });

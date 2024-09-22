@@ -40,7 +40,7 @@ if (cus && t)
 
 
  async function getre(){
-    let x= await fetch('http://127.0.0.1:8000/event/list/')
+    let x= await fetch('https://normad-bakend.onrender.com/event/list/')
     let data=await x.json()
     return data
 }

@@ -12,7 +12,7 @@ const handlelogin=(event)=>{
     console.log(username,password)
 
 
-    fetch("http://127.0.0.1:8000/account/registration/login/",{
+    fetch("https://normad-bakend.onrender.com/account/registration/login/",{
 
         method: "POST",
         headers: {"content-type": "application/json"},
@@ -81,7 +81,7 @@ async function handleregistration(event) {
             formData.append('confirm_password', confirm_password);
           
 
-            fetch("http://127.0.0.1:8000/account/registration/newuser/", {
+            fetch("https://normad-bakend.onrender.com/account/registration/newuser/", {
                 method: "POST",
                 body: formData,
             })

@@ -27,7 +27,7 @@ rv()
 async function detailtour(){
     const k = new URLSearchParams(window.location.search).get("dataid");
     console.log(k);
-    let x= await fetch(`http://127.0.0.1:8000/event/list/${k}`)
+    let x= await fetch(`https://normad-bakend.onrender.com/event/list/${k}`)
     let data=await x.json()
     console.log(data)
 
@@ -87,7 +87,7 @@ async function BookTravel(event) {
     const k = new URLSearchParams(window.location.search).get("dataid");
    
    
-    let x= await fetch(`http://127.0.0.1:8000/event/list/${k}`)
+    let x= await fetch(`https://normad-bakend.onrender.com/event/list/${k}`)
     let d=await x.json()
     const userId = localStorage.getItem("user_id");  
     
@@ -123,7 +123,7 @@ async function BookTravel(event) {
     };
     console.log(formData,k)
     try {
-        const response = await fetch(`http://127.0.0.1:8000/event/list/${k}/addpeople/`, {
+        const response = await fetch(`https://normad-bakend.onrender.com/event/list/${k}/addpeople/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -154,7 +154,7 @@ async function ShareTravel(event) {
     const k = new URLSearchParams(window.location.search).get("dataid");
    
    
-    let x= await fetch(`http://127.0.0.1:8000/event/list/${k}`)
+    let x= await fetch(`https://normad-bakend.onrender.com/event/list/${k}`)
     let d=await x.json()
     const userId = localStorage.getItem("user_id");  
     
@@ -200,7 +200,7 @@ async function ShareTravel(event) {
      };
     console.log(formData,k)
     try {
-        const response = await fetch(`http://127.0.0.1:8000/sharetravel/join/`, {
+        const response = await fetch(`https://normad-bakend.onrender.com/sharetravel/join/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -235,7 +235,7 @@ async function Postreview(event) {
     const k = new URLSearchParams(window.location.search).get("dataid");
    
    
-    let x= await fetch(`http://127.0.0.1:8000/event/list/${k}`)
+    let x= await fetch(`https://normad-bakend.onrender.com/event/list/${k}`)
     let d=await x.json()
     const userId = localStorage.getItem("user_id");  
     
@@ -278,7 +278,7 @@ async function Postreview(event) {
      };
     console.log(formData,k)
     try {
-        const response = await fetch(`http://127.0.0.1:8000/event/review/`, {
+        const response = await fetch(`https://normad-bakend.onrender.com/event/review/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -307,7 +307,7 @@ async function rv()
     const parent=document.getElementById('ourslides')
     const k = new URLSearchParams(window.location.search).get("dataid");
 
-    const response= await fetch(`http://127.0.0.1:8000/event/review/?travelname=${k}`)
+    const response= await fetch(`https://normad-bakend.onrender.com/event/review/?travelname=${k}`)
     const data=await response.json()
     console.log(data)
     data.forEach(element => {
@@ -316,7 +316,7 @@ async function rv()
         name()
         async function name()
         { 
-        const response= await fetch(` http://127.0.0.1:8000/account/registration/${element.reviewer[0]}/`)
+        const response= await fetch(` https://normad-bakend.onrender.com/account/registration/${element.reviewer[0]}/`)
          const res=await response.json()    
         
     
