@@ -32,6 +32,11 @@ if (cus && t)
   `
   
   `
+  const authenticbar=document.getElementById('authenticbar')
+  authenticbar.innerHTML=`
+  <a href="login.html" class="btn btn-dark text-white">Login</a> <a href="signup.html" class="btn btn-primary ">Signup</a>
+
+  `
   
   }
 
