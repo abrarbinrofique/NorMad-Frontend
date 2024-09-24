@@ -16,7 +16,7 @@ async function chatlist()
    
     let l=localStorage.getItem('user_id')
     console.log(l)
-     const  resp= await fetch(`https://normad-bakend.onrender.com/event/list/?people=${l}`)
+     const  resp= await fetch(`https://normad-bakend.vercel.app/event/list/?people=${l}/`)
      let data= await resp.json()
     
      let chat=document.getElementById('chattinterface')
@@ -53,7 +53,7 @@ async function chats(k) {
     const chatbox = document.getElementById('chatbox');
     chatbox.innerHTML = ''; // Clear previous chats
 
-    const msg = await fetch(`https://normad-bakend.onrender.com/event/travelplan/?plan=${k}`);
+    const msg = await fetch(`https://normad-bakend.vercel.app/event/travelplan/?plan=${k}/`);
     const res = await msg.json();
 
     // Append chat messages first
@@ -94,7 +94,7 @@ async function sender(event,k)
     };
     console.log(formData,k)
     try {
-        const response = await fetch(`https://normad-bakend.onrender.com/event/travelplan/${k}/sendmessage/`, {
+        const response = await fetch(`https://normad-bakend.vercel.app/event/travelplan/${k}/sendmessage/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -12,7 +12,7 @@ const handlelogin=(event)=>{
     console.log(username,password)
 
 
-    fetch("https://normad-bakend.onrender.com/account/registration/login/",{
+    fetch("https://normad-bakend.vercel.app/account/registration/login/",{
 
         method: "POST",
         headers: {"content-type": "application/json"},
@@ -81,7 +81,7 @@ async function handleregistration(event) {
             formData.append('confirm_password', confirm_password);
           
 
-            fetch("https://normad-bakend.onrender.com/account/registration/newuser/", {
+            fetch("https://normad-bakend.vercel.app/account/registration/newuser/", {
                 method: "POST",
                 body: formData,
             })

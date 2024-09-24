@@ -45,7 +45,7 @@ if (cus && t)
 
 
  async function getre(){
-    let x= await fetch('https://normad-bakend.onrender.com/event/list/')
+    let x= await fetch('https://normad-bakend.vercel.app/event/list/')
     let data=await x.json()
     return data
 }

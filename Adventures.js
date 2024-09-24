@@ -19,14 +19,14 @@ else
 
 async function travelsdetails(k)
 {
-  let x= await fetch(`https://normad-bakend.onrender.com/event/list/${k}`)
+  let x= await fetch(`https://normad-bakend.vercel.app/event/list/${k}/`)
   let d=await x.json()
   return d
 }
 
 async function peopleinfo(l)
 {
-  let name=await  fetch(`https://normad-bakend.onrender.com/account/registration/${l}/`)
+  let name=await  fetch(`https://normad-bakend.vercel.app/account/registration/${l}/`)
        
   let n= await name.json()
   return n
@@ -35,7 +35,7 @@ async function peopleinfo(l)
 async function checkexist(g)
 {
 
-  const res=await fetch(`https://normad-bakend.onrender.com/sharetravel/join/${g}`)
+  const res=await fetch(`https://normad-bakend.vercel.app/sharetravel/join/${g}/`)
   let y=await res.json()
   console.log(y)
   let user=localStorage.getItem('user_id')
@@ -52,7 +52,7 @@ async function checkexist(g)
 async function checkmaineventexist(g)
 {
 
-  const res=await fetch(`https://normad-bakend.onrender.com/event/list/${g}`)
+  const res=await fetch(`https://normad-bakend.vercel.app/event/list/${g}/`)
   let y=await res.json()
   console.log(y)
   let user=localStorage.getItem('user_id')
@@ -71,7 +71,7 @@ async function sharetravels()
 {
 
     const shares=document.getElementById('shares') 
-    const res=await fetch("https://normad-bakend.onrender.com/sharetravel/join/")
+    const res=await fetch("https://normad-bakend.vercel.app/sharetravel/join/")
     let data=await res.json()
 
     
@@ -153,7 +153,7 @@ async function  joinshare(k,l)
 
 console.log(formData,k)
 try {
-    const response = await fetch(`https://normad-bakend.onrender.com/sharetravel/join/${k}/sharetravel_add/`, {
+    const response = await fetch(`https://normad-bakend.vercel.app/sharetravel/join/${k}/sharetravel_add/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
