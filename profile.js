@@ -246,7 +246,11 @@ async function addprofileinfo(event) {
     const re=await fetch(`https://normad-bakend.vercel.app/account/upgrade/?people=${parseInt(userid)}`)
     const data=await re.json()
     console.log(data)
-    travelerid=data[0].id
+    if(data)
+    {
+      travelerid=data[0].id
+    }
+    
     console.log(travelerid)
   let id=localStorage.getItem('user_id')
   let bio = document.getElementById('bio').value;
