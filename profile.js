@@ -243,7 +243,7 @@ document.getElementById('profileForm').addEventListener('submit', addprofileinfo
 
 async function addprofileinfo(event) {
     event.preventDefault();
-    const re=await fetch(`https://normad-bakend.vercel.app/account/upgrade/?people=${parseInt(userid)}/`)
+    const re=await fetch(`https://normad-bakend.vercel.app/account/upgrade/?people=${parseInt(userid)}`)
     const data=await re.json()
     console.log(data)
     travelerid=data[0].id
