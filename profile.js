@@ -56,6 +56,7 @@ async function profiles(){
   const div=document.createElement('div')
   div.classList.add('container','p-3','col-lg-6')
   console.log(data)
+  if(data.length!==0){
   div.innerHTML=
   `<div class="img-container">
   <img src="https://res.cloudinary.com/dk2vgd0dv/${data[0].image}" alt="">
@@ -69,7 +70,7 @@ async function profiles(){
    <h2>${m.first_name} ${m.last_name}</h2>
    <h4>@${m.username}</h4>
     <h5>${data[0].bio}</h5>
-    <span>${data[0].phone}</span>`
+    <span>${data[0].phone}</span>`}
 
     card.append(div)
 }
@@ -246,12 +247,13 @@ async function addprofileinfo(event) {
     const re=await fetch(`https://normad-bakend.vercel.app/account/upgrade/?people=${parseInt(userid)}`)
     const data=await re.json()
     console.log(data)
-    if(data)
+    if(data.length!==0)
     {
       travelerid=data[0].id
+      console.log(travelerid)
     }
     
-    console.log(travelerid)
+    
   let id=localStorage.getItem('user_id')
   let bio = document.getElementById('bio').value;
   let gender = document.getElementById('gender').value;
@@ -272,18 +274,26 @@ async function addprofileinfo(event) {
   formData.append('x', x);
   console.log(img)
 
-  if (travelerid)
-  {
-    const responsePut = await fetch(`https://normad-bakend.vercel.app/account/upgrade/${travelerid}/`, {
-        method: "PUT",
-        body: formData,
-    });
-    
-    let dataPut = await responsePut.json();
-    console.log(dataPut);
-    alert('Your profile info has been updated via PUT.');
-     
-  }
+
+  if(data.length!==0)
+    {
+      travelerid=data[0].id
+      console.log(travelerid)
+      if (travelerid)
+        {
+          const responsePut = await fetch(`https://normad-bakend.vercel.app/account/upgrade/${travelerid}/`, {
+              method: "PUT",
+              body: formData,
+          });
+          
+          let dataPut = await responsePut.json();
+          console.log(dataPut);
+          alert('Your profile info has been updated via PUT.');
+           
+        }
+    }
+
+
   else
   {
     try {
