@@ -55,7 +55,7 @@ async function profiles(){
    console.log(data)
   const div=document.createElement('div')
   div.classList.add('container','p-3','col-lg-6')
-  console.log(data)
+  console.log(data[0])
   div.innerHTML=
   `<div class="img-container">
   <img src="https://res.cloudinary.com/dk2vgd0dv/${data[0].image}" alt="">
@@ -245,6 +245,7 @@ async function addprofileinfo(event) {
     event.preventDefault();
     const re=await fetch(`https://normad-bakend.onrender.com/account/upgrade/?people=${parseInt(userid)}`)
     const data=await re.json()
+    console.log(data)
     travelerid=data[0].id
     console.log(travelerid)
   let id=localStorage.getItem('user_id')
