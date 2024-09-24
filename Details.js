@@ -27,7 +27,7 @@ rv()
 async function detailtour(){
     const k = new URLSearchParams(window.location.search).get("dataid");
     console.log(k);
-    let x= await fetch(`https://normad-bakend.vercel.app/event/list/${k}/`)
+    let x= await fetch(`https://normad-bakend.vercel.app/event/list/${k}`)
     let data=await x.json()
     console.log(data)
 
