@@ -46,7 +46,7 @@ ui.innerHTML=
 async function profiles(){
   userid=localStorage.getItem('user_id')
    const card=document.getElementById('profilecard')
-   const re=await fetch(`https://normad-bakend.vercel.app/account/upgrade/?people=${parseInt(userid)}/`)
+   const re=await fetch(`https://normad-bakend.vercel.app/account/upgrade/?people=${parseInt(userid)}`)
   const d=await fetch (`https://normad-bakend.vercel.app/account/registration/${parseInt(userid)}/`)
   const m=await d.json()
   console.log(m)
@@ -86,7 +86,7 @@ async function friendrequest()
   let k=localStorage.getItem('user_id')
   //  k=parseInt(k)
   const requestlist=document.getElementById('requestlist')
-  const response= await  fetch(`https://normad-bakend.vercel.app/account/friendrequest/?to_user=${k}/`)
+  const response= await  fetch(`https://normad-bakend.vercel.app/account/friendrequest/?to_user=${k}`)
   const data=await  response.json() 
   console.log(data)
   if (data.length === 0) {
