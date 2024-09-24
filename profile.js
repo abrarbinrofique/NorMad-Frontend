@@ -55,7 +55,7 @@ async function profiles(){
    console.log(data)
   const div=document.createElement('div')
   div.classList.add('container','p-3','col-lg-6')
-  console.log(data[0])
+  console.log(data)
   div.innerHTML=
   `<div class="img-container">
   <img src="https://res.cloudinary.com/dk2vgd0dv/${data[0].image}" alt="">
