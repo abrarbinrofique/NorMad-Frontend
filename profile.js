@@ -284,7 +284,7 @@ async function addprofileinfo(event) {
   {
     try {
         const response = await fetch(`https://normad-bakend.vercel.app/account/upgrade/`, {
-            method: "POST", // or "PUT" based on your need
+            method: "POST",
             body: formData,
         });
 
