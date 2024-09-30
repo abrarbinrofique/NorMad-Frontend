@@ -367,6 +367,12 @@ footer{
    
 }
 
+.logoclass{
+    height: 18%;
+    width:18%;
+    margin-left: 20px;
+}
+
 
 /* .chats{
     margin-top:5px ;

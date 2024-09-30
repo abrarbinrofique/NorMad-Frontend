@@ -18,73 +18,66 @@
 
 <body id="docbody" class="docbody">
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid bg-dark">
-              <div class="justify-content-center align-center">
-                <img class="logoclass" src="./svgs/logo.svg" alt="add" />
-                <a class="navbar-brand m-auto namee text-white" href="index.html">NorMad</a>
-              </div>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="ml-80vw" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                    <div id="profileid"> 
-
-                      <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <i class="fas fa-user-circle"></i>
-                </a>
-                <ul id="profileid" class="dropdown-menu">
-                  <li><a class="dropdown-item " href="profile.html">Profile</a></li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" onclick="logoutuser()">Logout</a></li>
-                </ul>
-
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="#"
-                      >Adventure</a
-                    >
-                  </li>
-                 
-                  <li class="nav-item">
-                    <a class="nav-link text-white">About us</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary my-0 py-0">
+        <div class="container-fluid bg-dark">
+          <div class="justify-content-center align-center">
+            <img class="logoclass" src="./svgs/logo.svg" alt="add" />
+            <a class="navbar-brand m-auto namee text-white" href="index.html">NorMad</a> 
+          
+          </div>
+          
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="ml-80vw" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <div id="profileid"> </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="Adventures.html"
+                  >Adventure</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Chatting.html">Discussion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white">About us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
         
     </header>
-    <div class="profilebody row d-flex justify-content-around flex-wrap gap-5">
-    <div id="profilecard" class="container col-lg-6">
-        <!-- <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1534809027769-b00d750a6bac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" alt="">
-        </div>
-        <ul class="social-media">
-            <li><a href="#"><i class="fas fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fas fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fas fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fas fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fas fa-instagram"></i></a></li>
-          </ul>
-          <div class="user-info">
-            <h2>Aniket Singh</h2>
-            <span>20-july</span>
-          </div> -->
+    <div class="profilebody mt-5 d-flex justify-content-between flex-wrap">
+
+    <div>
+    <div id="profilecard" class="container ">
+    
+
+    </div>
+    <div class="d-flex justify-content-center btn-danger gap-2 m-5">
+       
+      <button type="button" class="btn edit text-white" data-bs-toggle="modal" data-bs-target="#exampleMod">Edit Profile</button>  
+      <button type="button" class="btn add" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       Add a new Tour
+      </button>
+  </div>
+
+ <!-- profile details -->
+
       </div>
+      
 
       
       <div class="col-lg-3">
@@ -97,13 +90,7 @@
         
         
       </div>
-      <div class="d-flex justify-content-center btn-danger gap-2 m-5">
-       
-        <button type="button" class="btn edit text-white" data-bs-toggle="modal" data-bs-target="#exampleMod">Edit Profile</button>  
-        <button type="button" class="btn add" data-bs-toggle="modal" data-bs-target="#exampleModal">
-         Add a new Tour
-        </button>
-    </div>
+     
 
       
       </div>

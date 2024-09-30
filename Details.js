@@ -37,16 +37,16 @@ async function detailtour(){
         console.log(data)
         const div = document.createElement('div');
         div.innerHTML = `
-            <div class="mask d-flex align-items-center justify-content-center">
+            <div class="mask d-flex align-items-center justify-content-center ">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-7 col-12 order-md-1 order-2">
-                            <h4 class"punch">${data.location}</h4>
+                            <h4 class"punch textstyle"><b>${data.location}</b></h4>
                             <p>${data.Description}</p>
                             <h4><i class="fa-solid fa-calendar-days"></i> ${data.traveldate}</h4>
-                            <div class="d-flex align-items-center d-flex align-items-center"><p>People Limit:${data.people_limit}</p></div>
-                           <div class="d-flex align-items-center"> Cost: ${data.cost}$ </div>
-                           <p>Available seats: ${data.people_limit - data.people.length}</p>
+                            <div class="d-flex align-items-center d-flex align-items-center textstyle"><p>People Limit:${data.people_limit}</p></div>
+                           <div class="d-flex align-items-center textstyle"> Cost: ${data.cost}$ </div>
+                           <p class="textstyle">Available seats: ${data.people_limit - data.people.length}</p>
 
                        <div class="d-flex justify-content-between">
                            <div class="d-flex justify-content-center gap-4">
@@ -322,14 +322,14 @@ async function rv()
     
     li.innerHTML=
     ` 
-      <div class="card border-0">
-          <div class="ratio ratio-1x1">
+      <div class="carders card textstyle">
+          <div class=" ratio ratio-1x1">
               <img src="https://res.cloudinary.com/dk2vgd0dv/image/upload/v1723566997/samples/balloons.jpg" class="card-img-top" loading="lazy" alt="...">
           </div>
-          <div class="card-body p-0 pt-2">
+          <div class=" card-body p-0 pt-2">
               <div class="d-flex">
-                  <h4 class="flex-grow-1 h5 p-2">${element.textreview}</h4>
-                  <p class="px-2 p-3">${element.ratting}⭐</p>
+                  <h5 class="flex-grow-1 h5 p-2">${element.textreview}</h5>
+                  <p class="px-2 p-3">${element.ratting}<b>⭐</b></p>
               </div>
               <p class="card-text p-3">${res.username}</p>
           </div>

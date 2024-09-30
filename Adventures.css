@@ -87,3 +87,9 @@
     font-family: 'Befont';
     font-size: 50px;
   }
+
+  .logoclass{
+    height: 18%;
+    width:18%;
+    margin-left: 20px;
+}
