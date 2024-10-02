@@ -93,3 +93,22 @@
     width:18%;
     margin-left: 20px;
 }
+
+
+.lists{
+  font-size:25px;
+  border:2px solid black;
+  margin:3px;
+  padding:15px;
+  border-radius: 20px;
+  width:20%;
+  background-color: rgba(70, 175, 223, 0.286);
+}
+
+
+.propic{
+  border-radius:50%;
+  height:75%;
+  width:15%
+
+}

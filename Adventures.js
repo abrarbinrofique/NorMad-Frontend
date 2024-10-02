@@ -8,6 +8,7 @@ if (i && d)
 
 
       sharetravels()
+      friends()
 
 
 }
@@ -196,4 +197,40 @@ function logoutuser() {
   
   
   window.location.href = 'login.html';  
+}
+
+
+
+async function friends()
+{  const d=await fetch (`https://normad-bakend.vercel.app/account/registration/`)
+  const my=await fetch (`https://normad-bakend.vercel.app/account/registration/${parseInt(i)}/`)
+  const m=await my.json()
+  const data=await d.json()
+  const list=document.getElementById('list')
+  data.forEach(element => {
+  
+    if(m.friends.includes(element.id))
+    {
+      
+    }
+    else
+    {
+      console.log(element)
+      const div=document.createElement('div')
+      div.classList.add('lists','justify-content-center','text-center')
+
+      div.innerHTML=
+      `
+      <img class="propic" src="https://genslerzudansdentistry.com/wp-content/uploads/2015/11/anonymous-user.png">
+     ${element.username} <button class="accept" onclick="accept(${element.id})"> <i class="fas fa-check m-2"></i></button> <button class="btn btn-success text-center" onclick="profile(${element.id})">View Profile</button>
+    `
+    list.append(div)
+
+    }
+ 
+
+
+    
+  });
+   
 }

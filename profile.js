@@ -51,7 +51,6 @@ async function profiles(){
   const d=await fetch (`https://normad-bakend.vercel.app/account/registration/${parseInt(userid)}/`)
   const m=await d.json()
   console.log(m)
-
    const data=await re.json()
    console.log(data)
   const div=document.createElement('div')
@@ -74,7 +73,49 @@ async function profiles(){
     <span>${data[0].phone}</span>`}
 
     card.append(div)
-}
+
+
+
+  const friends=document.getElementById('friendlist')
+  const h2=document.createElement('h2')
+  h2.classList.add('nolist','text-center')
+  h2.innerHTML=
+  
+  `
+  Your firends
+  `
+  
+  if (m.friends.length===0)
+  {
+    friends.innerHTML=
+    `
+    <p class="text-center">you have no friends</p>
+    `
+  }
+  else
+  {
+   const li=document.createElement('li')
+   li.classList.add('text-center')
+   m.friends.forEach(f=>{
+    async function myfriends()
+   {
+   const dat=await fetch (`https://normad-bakend.vercel.app/account/registration/${f}/`)
+   const l=await dat.json()
+   console.log(l.username)
+   li.classList.add('texter')
+   li.innerHTML=
+   ` ${l.username}`
+
+   friends.appendChild(li)
+   }
+   myfriends()
+
+   })}
+
+  }
+
+  
+
 
 
 
@@ -92,11 +133,19 @@ async function friendrequest()
   const data=await  response.json() 
   console.log(data)
   if (data.length === 0) {
+     
      requestlist.innerHTML=
      `
+      <h2 class="text-center headingtext text-white">Friend requests</h2>
       <h2 class="text-center heading text-dark">There is no request</h2>
      `
   } else {
+
+      requestlist.innerHTML=
+     `
+    <h2 class="text-center headingtext text-white">Friend requests</h2>
+
+    `
       data.forEach(element => {
 
           let g=parseInt(element.from_user)
@@ -107,7 +156,7 @@ async function friendrequest()
 
          const rel=await who.json()
          
-      //    console.log(parseInt(rel.username))
+     
 
           const div=document.createElement('div')
           div.classList.add('lists','justify-content-center','text-center')
@@ -342,7 +391,10 @@ async function mytravels()
   data.forEach(element => {
   
     console.log(element)  
-    console.log(element.people)
+    
+    if (element.people.includes(parseInt(cus)))
+      {
+         
     const div=document.createElement('div')
     div.classList.add('col-sm-4', 'col-md-4', 'col-lg-4', 'card', 'text-dark', 'card-has-bg', 'click-col');
     div.style.backgroundImage = `url('https://res.cloudinary.com/dk2vgd0dv/${element.image}')`;
@@ -356,7 +408,7 @@ async function mytravels()
        <h4 class="card-title mt-0 text-dark ">${element.location}</h4>
       <small class="nolist"><i class="far fa-clock"></i> ${element.traveldate}</small>
       <p class="nolist">$ ${element.cost} </p>
-      <div class="mt-3 nolist">${element.Description.slice(0,150)}...</div>
+      <div class="mt-3 nolist">${element.Description.slice(0,30)}...</div>
       
      </div>
      
@@ -373,13 +425,16 @@ async function mytravels()
  `
 
  mylist.appendChild(div)
-    
-  });
+      } 
+  })
+  
+;
 
 
 }
-
 }
+
+
 
 
 
