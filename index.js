@@ -69,7 +69,7 @@ async function loadservice() {
                     <div class="row align-items-center">
                         <div class="col-md-7 col-12 order-md-1 order-2">
                             <h4>${data.location}<br /></h4>
-                            <p>${data.Description}</p>
+                            <p>${data.Description.slice(0, 250)}...More</p>
                             <h4><i class="fa-solid fa-calendar-days"></i> ${data.traveldate}</h4>
                            <a href="Details.html?dataid=${data.id}" class="btn">Book Now</a>
                         </div>

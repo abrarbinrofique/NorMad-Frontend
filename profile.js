@@ -7,6 +7,7 @@ if (cus && t)
     
         profiles()
         friendrequest()
+        mytravels()
 
 
 
@@ -317,6 +318,73 @@ async function addprofileinfo(event) {
 
 
 }
+
+
+
+
+
+async function mytravels()
+{
+
+  const list= await fetch('https://normad-bakend.vercel.app/event/list/')
+  const data=await list.json()
+  const mylist=document.getElementById('mytravelist') 
+  const t=0;
+  if (data.length===0)
+  {
+    mylist.innerHTML=
+      `<h3 class="nolist">You List is empty</h3> `
+
+  }
+ else{
+
+ 
+  data.forEach(element => {
+  
+    console.log(element)  
+    console.log(element.people)
+    const div=document.createElement('div')
+    div.classList.add('col-sm-4', 'col-md-4', 'col-lg-4', 'card', 'text-dark', 'card-has-bg', 'click-col');
+    div.style.backgroundImage = `url('https://res.cloudinary.com/dk2vgd0dv/${element.image}')`;
+   
+   div.innerHTML=
+    ` 
+   
+   <div class="card-img-overlay d-flex flex-column">
+    <div class="card-body">
+     
+       <h4 class="card-title mt-0 text-dark ">${element.location}</h4>
+      <small class="nolist"><i class="far fa-clock"></i> ${element.traveldate}</small>
+      <p class="nolist">$ ${element.cost} </p>
+      <div class="mt-3 nolist">${element.Description.slice(0,150)}...</div>
+      
+     </div>
+     
+     <div class="card-footer">
+      <div class="media">
+
+       <a href="Details.html?dataid=${element.id}" class="btn chatbtn">Details</a>
+       <a href="Chatting.html" class="btn chatbtn">Discussion</a>
+     
+    
+</div>
+     </div>
+   </div>
+ `
+
+ mylist.appendChild(div)
+    
+  });
+
+
+}
+
+}
+
+
+
+
+
 
 
 function logoutuser() {
