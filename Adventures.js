@@ -201,36 +201,122 @@ function logoutuser() {
 
 
 
+async function send(k,l) {
+
+
+  const formData = {
+    to_user:parseInt(k)
+    };
+  
+  console.log(formData)
+  try {
+     console.log(d)
+      const sending = await fetch(`https://normad-bakend.vercel.app/account/friendrequest/${l}/send_request/`, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${d}`
+          },
+          body: JSON.stringify(formData)
+  
+        })
+  
+         let sharedata = await sending.json();
+         console.log(sharedata);
+         console.log('You send request!');
+         alert('you send friend request');
+  
+        }
+  catch (error) {
+ 
+  
+  }
+  
+}
+
+
+
+
 async function friends()
 {  const d=await fetch (`https://normad-bakend.vercel.app/account/registration/`)
   const my=await fetch (`https://normad-bakend.vercel.app/account/registration/${parseInt(i)}/`)
+  
   const m=await my.json()
   const data=await d.json()
   const list=document.getElementById('list')
+ 
   data.forEach(element => {
+
+   
+    // console.log(element.id)
   
-    if(m.friends.includes(element.id))
+    if(m.friends.includes(element.id)||element.id===parseInt(i))
     {
-      
+    
     }
     else
     {
-      console.log(element)
-      const div=document.createElement('div')
-      div.classList.add('lists','justify-content-center','text-center')
+      console.log(element.id)
+       async function requestheck()
+         {  let matchFound = false;
 
-      div.innerHTML=
-      `
-      <img class="propic" src="https://genslerzudansdentistry.com/wp-content/uploads/2015/11/anonymous-user.png">
-     ${element.username} <button class="accept" onclick="accept(${element.id})"> <i class="fas fa-check m-2"></i></button> <button class="btn btn-success text-center" onclick="profile(${element.id})">View Profile</button>
-    `
-    list.append(div)
+       
+  
+          const ttt=await fetch(`https://normad-bakend.vercel.app/account/friendrequest/`)
+          const h=await ttt.json()
+           h.forEach(el => {
+            console.log(el)
+         
 
+          if((el.from_user===parseInt(i) && el.to_user===(element.id)) || (el.from_user===(element.id) && el.to_user===parseInt(i)))
+         {
+           
+           matchFound=true
+          
+           console.log(matchFound)
+           return 
+         }
+          
+        })
+
+
+        
+       if(!matchFound)
+       {
+          console.log(element)
+          const div=document.createElement('div')
+          div.classList.add('lists','justify-content-center','text-center')
+    
+          div.innerHTML=
+          `
+          <img class="propic" src="https://genslerzudansdentistry.com/wp-content/uploads/2015/11/anonymous-user.png">
+          <h4 class="mt-2"> ${element.username} </h4>
+          <div>
+          <i class="fas fa-user-plus mx-4" onclick="send(${element.id},${i})"></i><button class="btn btn-success text-center" onclick="profile(${element.id})">view profile</button>
+          </div>
+        `
+        
+        list.append(div)
+
+         
+       }
+        
+        }
+  
+
+    
+
+
+      
+    
+requestheck()
     }
  
 
 
     
   });
+
+ 
    
 }
