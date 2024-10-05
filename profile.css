@@ -412,3 +412,11 @@ background: linear-gradient(0deg, rgba(144, 199, 205, 0.379) 0%, rgb(72, 158, 22
 .texter{
   font-size: 25px;
 }
+a.friendprofile {
+  text-decoration: none;  /* Removes the underline */
+  color: #f1f3f5;         /* Changes the color of the link */
+}
+
+a.friendprofile:hover {
+  color: #060c11;         /* Changes the color on hover */
+}

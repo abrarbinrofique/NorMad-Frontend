@@ -292,7 +292,7 @@ async function friends()
           <img class="propic" src="https://genslerzudansdentistry.com/wp-content/uploads/2015/11/anonymous-user.png">
           <h4 class="mt-2"> ${element.username} </h4>
           <div>
-          <i class="fas fa-user-plus mx-4" onclick="send(${element.id},${i})"></i><button class="btn btn-success text-center" onclick="profile(${element.id})">view profile</button>
+          <i class="fas fa-user-plus mx-4" onclick="send(${element.id},${i})"></i><a class="btn btn-success text-center" href="friends.html?dataid=${element.id}">view profile</a>
           </div>
         `
         

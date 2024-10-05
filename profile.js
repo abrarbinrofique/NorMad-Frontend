@@ -101,10 +101,11 @@ async function profiles(){
    {
    const dat=await fetch (`https://normad-bakend.vercel.app/account/registration/${f}/`)
    const l=await dat.json()
+   console.log(l)
    console.log(l.username)
    li.classList.add('texter')
    li.innerHTML=
-   ` ${l.username}`
+   ` <a class="friendprofile" href="friends.html?dataid=${l.id}"> ${l.username}</a>`
 
    friends.appendChild(li)
    }
