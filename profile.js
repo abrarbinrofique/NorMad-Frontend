@@ -397,14 +397,14 @@ async function mytravels()
       {
          
     const div=document.createElement('div')
-    div.classList.add('col-sm-4', 'col-md-4', 'col-lg-4', 'card', 'text-dark', 'card-has-bg', 'click-col');
+    div.classList.add('m-2','col-sm-12', 'col-md-6', 'col-lg-4', 'card', 'text-dark', 'card-has-bg', 'click-col');
     div.style.backgroundImage = `url('https://res.cloudinary.com/dk2vgd0dv/${element.image}')`;
    
    div.innerHTML=
     ` 
    
-   <div class="card-img-overlay d-flex flex-column">
-    <div class="card-body">
+   <div class="card-img-overlay d-flex flex-wrap">
+    <div class="card-body col-lg-6 col-sm-12 col-md-12  ">
      
        <h4 class="card-title mt-0 text-dark ">${element.location}</h4>
       <small class="nolist"><i class="far fa-clock"></i> ${element.traveldate}</small>

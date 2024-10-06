@@ -78,8 +78,8 @@ async function sharetravels()
     
     data.forEach(element => {
       console.log(element)
-      console.log(element.peoplelimit); // Should be a number or a string that can be converted to a number
-      console.log(element.travellersgroup.length); // Should be a number or a string that can be converted to a number
+      console.log(element.peoplelimit); 
+      console.log(element.travellersgroup.length); 
       
     let p=  element.peoplelimit-element.travellersgroup.length
     let k=parseInt(element.share)
@@ -93,13 +93,13 @@ async function sharetravels()
         let l=parseInt(element.shareby)
         let n=await  peopleinfo(l)
         const div = document.createElement('div')
-        // div.style.backgroundImage = `url(https://res.cloudinary.com/dk2vgd0dv/${d.image})`
-        div.classList.add('d-flex', 'justify-content-center', 'sharediv');
+      
+        div.classList.add('col-lg-4','col-md-6','col-sm-12','d-flex', 'justify-content-center', 'sharediv');
         
 
     console.log(d)
     console.log(data)
-    // <p class="highlighted-text">People Limit:${element.peoplelimit}</p>
+
     div.innerHTML=
 
     `   
@@ -285,7 +285,7 @@ async function friends()
        {
           console.log(element)
           const div=document.createElement('div')
-          div.classList.add('lists','justify-content-center','text-center')
+          div.classList.add('lists','justify-content-center','text-center','d-flex','flex-wrap','p-5')
     
           div.innerHTML=
           `

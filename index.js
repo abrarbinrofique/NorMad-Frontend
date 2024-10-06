@@ -62,13 +62,13 @@ async function loadservice() {
         console.log(data,index)
         const div = document.createElement('div');
         console.log(typeof(index))
-        div.classList.add('carousel-item', 'sliderss',"landerim");
+        div.classList.add('carousel-item', 'sliderss',"landerim",'d-flex','flex-wrap');
         div.innerHTML = `
-            <div class="mask d-flex align-items-center justify-content-center">
+            <div class="d-flex flex-wrap align-items-center justify-content-center col-lg-12 col-sm-12 col-md-12 ">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-7 col-12 order-md-1 order-2">
-                            <h4>${data.location}<br /></h4>
+                            <h4 class="p-5">${data.location}<br /></h4>
                             <p>${data.Description.slice(0, 250)}...More</p>
                             <h4><i class="fa-solid fa-calendar-days"></i> ${data.traveldate}</h4>
                            <a href="Details.html?dataid=${data.id}" class="btn">Book Now</a>

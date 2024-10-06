@@ -1,7 +1,8 @@
 .sharediv{
     /* border: 2px solid black; */
     padding:50px;
-    margin:125px;
+    margin-bottom:125px;
+    margin-right:25px;
     border-radius: 25px;
     background-position: cover;
     background-repeat: no-repeat;

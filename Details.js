@@ -36,8 +36,9 @@ async function detailtour(){
     
         console.log(data)
         const div = document.createElement('div');
+       
         div.innerHTML = `
-            <div class="mask d-flex align-items-center justify-content-center ">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-7 col-12 order-md-1 order-2">
@@ -48,8 +49,8 @@ async function detailtour(){
                            <div class="d-flex align-items-center textstyle"> Cost: ${data.cost}$ </div>
                            <p class="textstyle">Available seats: ${data.people_limit - data.people.length}</p>
 
-                       <div class="d-flex justify-content-between">
-                           <div class="d-flex justify-content-center gap-4">
+                       <div class="d-flex flex-wrap justify-content-center gap-4">
+                           <div class="d-flex justify-content-center gap-2 ">
                              <button  onclick="BookTravel(event)" class="button-lick"> Book</button>
                                <a href="Chatting.html?dataid=${data.id}" class="btn chatbtn">Discussion</a>
                           
@@ -63,7 +64,7 @@ async function detailtour(){
 
                         </div>
                         <div class="col-md-5 col-12 order-md-3 order-1">
-                            <img src="https://res.cloudinary.com/dk2vgd0dv/${data.image}" class="mx-auto img-fluid" alt="slide" />
+                            <img src="https://res.cloudinary.com/dk2vgd0dv/${data.image}" class="mx-auto img-fluid m-5" alt="slide" />
                         </div>
                     </div>
                 </div>
@@ -322,12 +323,12 @@ async function rv()
     
     li.innerHTML=
     ` 
-      <div class="carders card textstyle">
+      <div class="d-flex flex-wrap bg-success carders card textstyle">
           <div class=" ratio ratio-1x1">
               <img src="https://res.cloudinary.com/dk2vgd0dv/image/upload/v1723566997/samples/balloons.jpg" class="card-img-top" loading="lazy" alt="...">
           </div>
           <div class=" card-body p-0 pt-2">
-              <div class="d-flex">
+              <div class="d-flex flex-wrap">
                   <h5 class="flex-grow-1 h5 p-2">${element.textreview}</h5>
                   <p class="px-2 p-3">${element.ratting}<b>⭐</b></p>
               </div>
