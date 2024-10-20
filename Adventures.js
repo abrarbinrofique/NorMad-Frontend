@@ -285,7 +285,7 @@ async function friends()
        {
           console.log(element)
           const div=document.createElement('div')
-          div.classList.add('lists','justify-content-center','text-center','py-4')
+          div.classList.add('lists','justify-content-center','text-center','py-4','px-2')
     
           div.innerHTML=
           `
