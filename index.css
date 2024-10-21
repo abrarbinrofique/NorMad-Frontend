@@ -1,6 +1,6 @@
 .logoclass{
-    height: 18%;
-    width:18%;
+    height: 20%;
+    width:15%;
     margin-left: 20px;
 }
 .namee{
@@ -37,8 +37,10 @@
     padding-bottom: 50px;
     border-radius: 20px;
     width:80%;
-    background: rgb(47,32,22);
-background: linear-gradient(90deg, rgba(47,32,22,1) 0%, rgba(135,233,171,1) 50%, rgba(24,20,13,1) 100%);
+    background: rgb(103,12,15);
+   
+    background: linear-gradient(90deg, rgb(14, 8, 1) 0%, rgb(188, 168, 119) 70%);
+
 }
 
 .maindiv{
@@ -267,14 +269,18 @@ background: linear-gradient(90deg, rgba(47,32,22,1) 0%, rgba(219,157,232,1) 50%,
 }
 
 .sliderss{
-    background: rgb(22,125,149);
-    background: linear-gradient(90deg, rgba(22,125,149,1) 59%, rgba(4,105,53,1) 86%);
+  background: #9d854e;
+  background: linear-gradient(90deg, rgb(58, 46, 18) 59%, rgb(72, 52, 13) 86%);
 }
 
 
 .ativateslidess{
-    background: rgb(103,12,15);
-    background: linear-gradient(90deg, rgba(103,12,15,1) 0%, rgba(21,129,152,1) 70%);
+  background: #9d854e;
+  background: linear-gradient(90deg, rgb(58, 46, 18) 59%, rgb(72, 52, 13) 86%);
+}
+
+.act{
+  margin-top:300px
 }
 
 .booking{
@@ -294,3 +300,26 @@ footer{
   margin:0;
   padding:0;
 }
+
+
+.huss{
+  margin-top: -320px;
+  
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%; 
+
+
+  }
+.bkimg{
+ width:110%
+}
+
+.rvact{
+  margin-top: 100px;
+}
+
