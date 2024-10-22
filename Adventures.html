@@ -18,57 +18,67 @@
 
 <body id="docbody" class="docbody">
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary my-0 py-0">
-            <div class="container-fluid bg-dark">
-              <div class="justify-content-center align-center">
-                <img class="logoclass" src="./svgs/logo.svg" alt="add" />
-                <a class="navbar-brand m-auto namee text-white" href="index.html">NorMad</a>
-              </div>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="ml-80vw" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
+     
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-0 py-0 sticky-top">
 
-
-
-                  <li class="nav-item dropdown">
-                    <div id="profileid"> 
+        <div class="d-flex justify-content-center align-items-center p-3">
+          <img class="logoclass" src="./svgs/logo.svg" alt="logo" />
+          <a class="navbar-brand text-white" href="index.html">NoMad</a>
+        </div>
+        <div class="container-fluid">
+         
       
-                      <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <i class="fas fa-user-circle"></i>
-                </a>
-                <ul id="profileid" class="dropdown-menu">
-                  <li><a class="dropdown-item " href="profile.html">Profile</a></li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" onclick="logoutuser()">Logout</a></li>
-                </ul>
+          <!-- Navbar Toggler Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
       
-                    </div>
-                  </li>
-                </li>
-
-                  
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="Chatting.html">Disussion</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white">About us</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+             
+              <li class="nav-item dropdown">
+                <div id="profileid"> 
+          
+                  <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-user-circle"></i>
+            </a>
+            <ul id="profileid" class="dropdown-menu">
+              <li><a class="dropdown-item " href="profile.html">Profile</a></li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" onclick="logoutuser()">Logout</a></li>
+            </ul>
+          
+                </div>
+              </li>
+            </li>
+          
+  
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="Adventures.html">Adventure</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Chatting.html">Discussion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">About us</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>  
+  
         
     </header>
 
@@ -77,12 +87,12 @@
      
      
    
-        <img src="https://res.cloudinary.com/dk2vgd0dv/image/upload/v1725302630/sch7kspptmiokjuazqrx.jpg">
+        <img class="travelbanner" src="https://res.cloudinary.com/dk2vgd0dv/image/upload/v1725302630/sch7kspptmiokjuazqrx.jpg">
 
 
   
       <div>
-        <h1 class="texteer text-center">Travels Share by your friends...</h1>
+        <h1 class="texteer text-center mt-5">Travels Share by your friends...</h1>
       
       </div>
   

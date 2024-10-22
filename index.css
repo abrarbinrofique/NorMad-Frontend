@@ -269,18 +269,18 @@ background: linear-gradient(90deg, rgba(47,32,22,1) 0%, rgba(219,157,232,1) 50%,
 }
 
 .sliderss{
-  background: #9d854e;
+  background: #42137B;
   background: linear-gradient(90deg, rgb(58, 46, 18) 59%, rgb(72, 52, 13) 86%);
 }
 
 
 .ativateslidess{
-  background: #9d854e;
+  background: #42137B;
   background: linear-gradient(90deg, rgb(58, 46, 18) 59%, rgb(72, 52, 13) 86%);
 }
 
 .act{
-  margin-top:300px
+  margin-top:350px
 }
 
 .booking{
@@ -303,9 +303,17 @@ footer{
 
 
 .huss{
-  margin-top: -320px;
+  margin-top: -215px;
+  opacity: 1;
+  z-index: 100;
+  position: relative;
   
   }
+
+/* .loim{
+    margin-left: 180vw;
+    margin-top: -130vw;
+  }  */
 
   html, body {
     margin: 0;
@@ -315,11 +323,46 @@ footer{
 
 
   }
+
+ 
+
+  .carders{
+   background-color:  #D29C81;
+   width: 80%;
+   
+   border-radius: 10%;
+   border:5px  solid rgb(19, 122, 167)
+  }
+
+
+  .carders {
+   
+    flex-direction: row;
+    /* justify-content: space-between; Make sure content is spaced properly */
+    height: 100%; /* Ensure all cards have the same height */
+}
+
+  body {
+    background-image: url('https://res.cloudinary.com/dk2vgd0dv/image/upload/v1729637123/owbblgwe1ypavn7be2ix.jpg');
+    /* background-size: cover;  */
+    background-position: center; /* Centers the image */
+    /* background-repeat: no-repeat */
+    opacity: 1;
+}
+
 .bkimg{
- width:110%
+ width:110%;
+ opacity: 0.8;
+ 
 }
 
 .rvact{
   margin-top: 100px;
 }
 
+
+.les{
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+}

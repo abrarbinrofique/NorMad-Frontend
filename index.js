@@ -6,80 +6,44 @@ let t=localStorage.getItem('token');
 
 
 
-async function get(){
-      
-  let x= await fetch('https://normad-bakend.vercel.app/event/review/')
-  let data=await x.json()
+async function rv()
+{
+    const parent=document.getElementById('slider2')
+    const k = new URLSearchParams(window.location.search).get("dataid");
 
-  const paren = document.getElementById('slider2')
-
-
-data.forEach((rv) => {
-const li=document.createElement('li')
-
-
-let customerid=rv.customer
-console.log(customerid)
-rvname(customerid)
-
-
-
-
-
-
-
-async function rvname(customerid){
-  const res =await  fetch(`https://homeper-backend.vercel.app/customer/${customerid}/`);
-    const data =await  res.json();
-
-   
-  let  name= data.user
-   
-
-
-   li.innerHTML = `
-       
-            <div class="card shadow w-20">
-              
-                   <img src="https://res.cloudinary.com/dk2vgd0dv/image/upload/v1723566992/samples/landscapes/nature-mountains.jpg" class="card-img-top" loading="lazy" alt="...">
-                 
-                <div class="card-body d-flex flex-column flex-md-row">
-                    <div class="flex-grow-1">
-                        <strong>${rv.textreview}</strong>
-                        <p>personal ratting:  ${rv.ratting}⭐</p>
-
-                        <p class="card-text">${name}</p>
-                    </div>
-                     
-                   
-                 
-                </div>
-                
-                
-                
-            </div>
-       
-
-
-               `
-   paren.appendChild(li)
-
-}
-
-
-})
-
-
-
-
-
-  
-    }
-
-  
-get()
-
-
+    const response= await fetch(`https://normad-bakend.vercel.app/event/review/`)
+    const data=await response.json()
+    console.log(data)
+    data.forEach(element => {
+        console.log(element)
+        const li=document.createElement('li')
+        name()
+        async function name()
+        { 
+        const response= await fetch(` https://normad-bakend.vercel.app/account/registration/${element.reviewer[0]}/`)
+         const res=await response.json()    
+        
+    
+    li.innerHTML=
+    ` 
+      <div class="card d-flex flex-wrap  carders  textstyle">
+          <div class=" ratio ratio-1x1">
+              <img src="https://res.cloudinary.com/dk2vgd0dv/image/upload/v1724866652/fhbetvygt5xuo41if1n4.jpg" class="card-img-top" loading="lazy" alt="...">
+          </div>
+          <div class=" card-body p-0 pt-2">
+              <div class="d-flex flex-wrap">
+                  <h5 class="flex-grow-1 h5 p-2">${element.textreview.slice(0,60)}...</h5>
+                  <p class="px-2 ">${element.ratting}<b>⭐</b></p>
+              </div>
+              <p class="card-text p-3">${res.username}</p>
+          </div>
+      </div>
+  `
+        }
+        parent.append(li)
+});
+} 
+rv()
      
 if (cus && t)
     {
@@ -115,7 +79,7 @@ if (cus && t)
   `
   const authenticbar=document.getElementById('authenticbar')
   authenticbar.innerHTML=`
-  <a href="login.html" class="btn btn-dark text-white">Login</a> <a href="signup.html" class="btn btn-primary ">Signup</a>
+  <a  href="login.html" class="btn btn-info text-white">Login</a> <a   href="signup.html" class="btn btn-primary ">Signup</a>
 
   `
   
@@ -124,7 +88,7 @@ if (cus && t)
 
 
 
-
+ 
  async function getre(){
     let x= await fetch('https://normad-bakend.vercel.app/event/list/')
     let data=await x.json()

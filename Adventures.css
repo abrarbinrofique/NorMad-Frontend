@@ -118,3 +118,18 @@
   width:25%
 
 }
+
+
+body {
+  background-image: url('https://res.cloudinary.com/dk2vgd0dv/image/upload/v1729637123/owbblgwe1ypavn7be2ix.jpg');
+  /* background-size: cover;  */
+  background-position: center; /* Centers the image */
+  /* background-repeat: no-repeat */
+}
+
+
+.travelbanner{
+
+
+  opacity: 0.9;
+}

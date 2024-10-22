@@ -323,13 +323,13 @@ async function rv()
     
     li.innerHTML=
     ` 
-      <div class="d-flex flex-wrap bg-success carders card textstyle">
+      <div class="card d-flex flex-wrap  carders  textstyle">
           <div class=" ratio ratio-1x1">
               <img src="https://res.cloudinary.com/dk2vgd0dv/image/upload/v1723566997/samples/balloons.jpg" class="card-img-top" loading="lazy" alt="...">
           </div>
           <div class=" card-body p-0 pt-2">
               <div class="d-flex flex-wrap">
-                  <h5 class="flex-grow-1 h5 p-2">${element.textreview}</h5>
+                  <h5 class="flex-grow-1 h5 p-2">${element.textreview.slice(0,60)}...</h5>
                   <p class="px-2 p-3">${element.ratting}<b>⭐</b></p>
               </div>
               <p class="card-text p-3">${res.username}</p>

@@ -420,3 +420,11 @@ a.friendprofile {
 a.friendprofile:hover {
   color: #060c11;         /* Changes the color on hover */
 }
+
+
+body {
+  background-image: url('https://res.cloudinary.com/dk2vgd0dv/image/upload/v1729637123/owbblgwe1ypavn7be2ix.jpg');
+  /* background-size: cover;  */
+  background-position: center; /* Centers the image */
+  /* background-repeat: no-repeat */
+}

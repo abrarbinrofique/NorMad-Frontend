@@ -108,11 +108,15 @@ footer{
   border-radius: 20px; /* Simplified border-radius */
   z-index: 1000;
   margin-top: 10px;
+ 
 }
 
+.carimage{
+  opacity: 0.5;
+}
 
 .card{
- background-color:#E8FEFF;
+  background-color:  #D29C81;
 }
 
 .carimage{
@@ -122,4 +126,10 @@ margin-right: -500px;
 height: 30%;
 width: 30%;
 
+}
+
+.logoclass{
+  height: 20%;
+  width:15%;
+  margin-left: 20px;
 }
