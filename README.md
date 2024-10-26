@@ -2,13 +2,13 @@
 
 ![cover](https://github.com/abrarbinrofique/NorMad-Bakend/blob/main/nor.png)
 
-NorMad is a travel-sharing platform that enables users to book and share travel plans. Below is a description of the key features and how the travel sharing mechanism works.
+NorMad is a travel-sharing platform that enables users to book and share travel plans. Below is a description of the key features, technologies used, and how the travel sharing mechanism works.
 
 ---
 
 ## Features
 
-- **User Authentication**: Users can sign up, log in, and manage their profiles. 
+- **User Authentication**: Users can sign up, log in, and manage their profiles.
 - **Travel Booking**: Users can browse available tours and book their desired travel events.
 - **Travel Sharing with Friends**: 
   - Users can create travel plans and share them with friends.
@@ -17,6 +17,14 @@ NorMad is a travel-sharing platform that enables users to book and share travel 
   - If the group reaches its limit, no additional users can join until spots open up.
 - **Group Chat**: After booking, users can chat with fellow travelers who also booked the same event.
 - **Travel Reviews**: Users can leave reviews for their travel experiences and read reviews from others.
+
+## Technologies Used
+
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## Mechanism of Travel Sharing
 
