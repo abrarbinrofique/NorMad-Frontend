@@ -23,11 +23,14 @@ const handlelogin=(event)=>{
         console.log(data);
         console.log(data.token,data.user_id)
         if(data.token && data.user_id){  
-        localStorage.setItem("token",data.token);
-        localStorage.setItem("user_id",data.user_id);
-        // localStorage.setItem("customer", JSON.stringify(data.customer))
-        window.location.href="index.html"
-
+           localStorage.setItem("token",data.token);
+            localStorage.setItem("user_id",data.user_id);
+           // localStorage.setItem("customer", JSON.stringify(data.customer))
+           window.location.href="index.html"
+      
+        }
+        else{
+            alert('please check your username and Password and try again')
         }
     });
    
@@ -101,7 +104,7 @@ async function handleregistration(event) {
         }
     } else {
        
-        alert('Passwords must match.');
+        alert('Passwords doesnot match.');
         document.getElementById('error').innerText = "Passwords must match.";
     }
 }
